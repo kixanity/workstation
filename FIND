@@ -1,0 +1,29 @@
+###find files using name in current directory
+find . -name abc.txt
+
+###find all .txt files in directories abc
+find /home/abc -name '*.txt'
+
+###find files using name and ignoring case
+find /home/abc -iname abc.txt
+
+###find directories abc
+find / -type d -name abc
+
+###find files based on their permissions (permission 777)
+find / -type f -perm 0777 -print
+
+###find file with permission 777 and change the permission to 755
+find / -type f -perm 0777 -exec chmod 755 {} \;
+
+###find all the files that were modified 10 days modified back
+find / -mtime 10
+find / -mtime +1  (more then 1 day ago)
+find / -mtime -2  (less then 2 days ago)
+
+find /dir -cmin -60 # creation time
+find /dir -mmin -60 # modification time
+find /dir -amin -60 # access time
+
+###find all the file more than 10mb
+find / -size +10M

@@ -1,0 +1,87 @@
+Software tools to diagnose network connectivity
+Software tools can sometimes be even more informative than hardware tools when troubleshooting issues with network connectivity
+
+Protocol analyzer
+	> monitors network traffic
+	computer and SPAN port (wireshark)
+	analyzing network issues
+	create a baseline (when network is in normal state, then compare when it is down)
+	capture and analyze signals and data traffic over a communication channel
+
+Throughput testers
+	> simulates network traffic
+	similar to ‘stress testers’ (testing beyond the limits of normal operation)
+	simulate load through load testing
+	establishes baselines
+
+Connectivity software
+	> provides continuous or period testing if a device is online
+	verify systems are online
+	send alerts if device is down
+	deliver alerts via email
+	can use ICMP echo requests (ping)
+
+
+Command Line Commands
+
+ping
+	> ICMP echo request
+	used to ping a system and get a response back
+	ping <ip address/hostname of computer>
+	linux pings until break
+	windows pings 4 times
+
+tracert (traceroute)
+	> response from each gateway along the path
+	shows TTL/hops to the end point
+	tracks  the  route  packets taken from an IP network on their way to a given host
+	can be used to discover what’s causing a ‘bottleneck’ on a network (a situation that causes delay)
+
+ipconfig (ifconfig)
+	> displays the status of the currently active interfaces
+	shows generic information about our client such as the network name and which DNS servers we are connected to for a particular adapter
+	all - detailed info
+	flushdns - flush dns cache (when a server moved to another ip address)
+	release - release lease address
+	renew - renew dhcp
+
+nslookup (dig)
+	> query Internet domain name servers
+	perform a DNS lookup and see what servers are providing us with a response
+	nslookup <ip/dns>
+	
+
+Dig
+	> linux/unix version of NSlookup
+
+Address Resolution Protocol (ARP)
+	> see the MAC address to IP address correlations
+
+Nbt stat
+	> ip to dns (old)
+
+Netstat
+	> displays network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+
+Route
+	>  allows us to view and modify routing tables (such as print, add and delete)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

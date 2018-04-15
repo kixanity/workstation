@@ -1,0 +1,75 @@
+Appliances
+
+Load Balancer - distributes the workload
+Proxy Server - privacy/caching
+Content Filter - protection blocking
+VPN Concentrator - connects externally
+
+Load Balancer
+	> used to distribute the workload across devices
+	load balancers transparently distribute
+	transparently distribute using algorithms
+	
+		Round robin > 1, 2, 3, 4, 1, 2, 3, 4
+		
+		Weighted round robin > 3, 3, 3, 2, 2, 1, 3, 3, 3, 2, 2, 1
+
+		Fastest response time > whatever server response first, it will get the request
+
+		Least connection > fewest queueing
+
+	also capable of DOS protection and caching
+
+		DOS attack > (e.g. when someone is trying to bring down/hack/find a vulnerability to a site by sending high volume/millions of send requests at once,
+		now it will get too many requests until it cant handle all those request and try to deny others of service,
+		then noticed it came from the same MAC address a load balancer will drop the packets)
+	
+		caching	> (e.g. too much requested webpage will be saved so it doesnt have to pass others some workload)
+
+
+Proxy Server
+	> goes for us on our behalf
+	work in between our computers and the Internet
+	intentional man in the middle
+	pc to proxy server then internet
+	
+	additional privacy > the endpoint sees the proxy as the one whos connected to them rather than us
+				requests a decoy ip address
+	
+	content filtering > if some contents/keywords/websites are not allowed to be browsed then proxy server will drop those requests
+
+	increased performance (caching) > if two computers sends the same request then it send the other one response from the proxy server cache
+					caching websites that viewed alot
+
+
+Content Filter
+	> able block traffic based on rules and filters
+	traffic needs to flow through device
+	can be evaluated in different ways such as keywords in the URL or the category of web sites
+	many different environments
+	Content filters can be used in many different environments such as parental controls
+	office productivity to prevent employees from spending too much time on certain web sites
+	Content filters can be hardware, software or cloud-based
+
+VPN Concentrator
+	> provides a connection point for remote users
+	adds the capabilities of a VPN router by adding advanced data and network security to the communications
+	has the ability to create and manage a large quantity of VPN tunnel
+	initiate the VPN client and connects to the public Internet
+
+	end users initiate VPN client
+	connect to public internet
+	encrypted tunnel to VPN concentrator
+	concentrator authenticates
+
+	laptop (encrypt / vpn client) > internet > concentrator ( decrpyt) > work
+	work > concentrator (encrypt ) > internet > laptop ( decrpyt )
+
+	data flows through the encrypted tunnel to the concentrator and then the concentrator authenticates
+	provides encryption and prevents remote access servcie exposure
+	capable of standing alone or implementing into the edge router
+
+
+
+
+	 

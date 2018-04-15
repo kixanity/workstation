@@ -1,0 +1,103 @@
+31 - Process Priorities (Nice Levels)
+	$ps -alf
+
+	nice - run a program with modified scheduling priority
+		only root can set -1 to -20 niceness
+
+		-20 not nice to cpu
+		19 less cpu usage
+		0 default
+
+		$nice -10 <application>
+		$nice --15 <application>
+
+	renice - alter priority of running processes
+		users can only raise nice levels
+		cannot rolled back
+
+		$renice 19 -p <process id>
+		$renice -10 -p <process id>
+
+32 - Regular Expressions with grep, egrep & fgrep
+	regcomp, regexec, regerror, regfree - POSIX regex functions
+	grep, egrep, fgrep, rgrep - print lines matching a pattern
+
+	[apple]
+	^ - beginning of the line
+		grep ^ap
+
+	$ - end of line
+		grep le$
+
+	. - any character missing
+	a.... - any 5 characters long
+		grep ..pl.
+		grep ^.pp
+
+	() - group
+
+	| - or
+		egrep '^(a|A)' at the beginning of the line lower or upper case 'A'
+
+	[] - ranges
+		egrep '^[a-m]'
+			must be inside quote when in egrep
+			at the beginning of the line search a to m
+	
+	fgrep '$$' - searches for $$
+	grep $$ - doesn't show anything cause it evaluates it as a regex
+
+33 - Basic vi usage
+	---
+
+34 - Intermediate vi usage
+	/word - search forward
+	?word - search backward
+
+	:%s/word/replacement/gic
+		% - whole doc
+		s - substitute
+		g - all occurences in every line
+		i - case insensitive
+		c - confirm each replacement
+
+	dl - delete character
+	d5l - 5 characters
+	dw - delete word
+	d3w - delete 3 words
+	dd - delete line
+	d4d - delete 4 lines
+
+	yy - yank(copy) current line
+	y5y - yank 5 lines
+	y3w - yank 3 words
+	p - paste yanked text after current line
+
+35 - GPT and MBR
+	MBR (mster boot recoed)
+		$fdisk
+		DOS partition
+		lives on first sector
+		limited to 2tb
+		limited to 4 primary partitions
+
+	GPT (GUID partition table)
+		$gdisk
+		stored in multiple locations on drive
+		practically unlimited drive size and partition number
+
+	BIOS
+		only supports MBR (GPT itself acts like MBR)
+		sees GPT as a drive with a single MBR partition
+
+	UEFI
+		native GPT support
+		usually need to run in legacy mode to support MBR
+
+
+
+
+
+
+
+

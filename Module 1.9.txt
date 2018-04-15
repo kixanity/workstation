@@ -1,0 +1,87 @@
+Networking Virtual Computers
+	> virtual computers need netwroking
+	May only have one NIC
+	Physical devices may be unnecessary
+	Virtual switches
+	Virtual VLANS
+	Other virtual services
+
+Virtual switches
+	> allow us to have the same environment in a virtual environment that we would if we were using a physical switch
+	and allow computers to communicate with more ease than if they were using an actual physical switch
+	these switches also allow us to set up virtual local area networks while using a single NIC
+	> switch like connectivity
+	communicate over layer 2
+	setup vlans
+	utilize single NIC as trunk port
+
+Virtual Desktops
+	> allow us to have an entire virtual computer that we can connect to which allows us to access files,
+	folder and different applications and be consistent with a physical environment
+
+	Remote Desktop Virtualization
+		> Virtual desktop with remote data
+		Consistent folders everywhere
+		Remote data execution
+
+	Local Desktop Virtualization
+		> Virtual machine runs locally
+		Virtual disk/image synced
+		Local resources but constant network not required
+
+Virtual Servers
+	> servers that we can virtualize that provide us with a full service so that a full physical server may not be necessary
+	allows for logical distribution and scalable resources and communicate over the NIC
+	may install more NICs
+	may install virtual switch
+
+Virtual Box
+
+Private Branch Exchange (PBX)
+	> a telephone switch and call manager
+	Establishing connections
+	Maintaining connections
+	Disconnecting connections
+	Providing call information
+	
+Virtual PBX 
+	replaces hardware but still requires a call agent
+	useful for Voice Over Internet (VoIP)
+	works well in every environment from a small office to a large call center
+
+
+ONSITE VS OFFSITE (service hosted on site or in cloud)
+	Onsite
+		There is faster response time and more control
+		Business continuity can be affected if there are problems with the building (e.g. a power failure)
+		It can be pricey to keep staff on site to work on the web server
+		Staff/Training
+
+	Off-site
+		It can be more economical to manage a company web server
+		Allows for business continuity in case of something like a power failure
+		A great resource for backing up a lot of data
+		Connectivity Delay
+		Information Control
+
+Network as a Service (NaaS)
+	> allows for an offsite network
+	all that is needed is a computer, a connection to an ISP
+	hosts apps, data, servers, etc.
+	
+	Advantages
+		Less in house management
+		Greater business continuity and backups
+		Powerful resources for less money
+		Scalable
+	Disadvantages
+		Less control/more security concerns
+		Can cost a lot
+		Connectivity issues
+
+
+
+
+
+
+

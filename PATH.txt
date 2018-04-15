@@ -1,0 +1,1 @@
+PATH=/home/ralaco/bin:/home/ralaco/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/puppetlabs/bin

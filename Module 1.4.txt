@@ -1,0 +1,221 @@
+Routing/Switching
+	Allows for connecting devices
+	Switching (same network)	
+	Routing (different network)
+
+Hubs
+	> receive data then sends to everyone except to the one who sends it to it
+	computers decide to accept/reject
+
+Switches
+	> ‘smart’ hub
+	tracks MAC (port)
+
+Multilayers
+	> can perform routing and switching
+	layers 2 & 3
+
+Bridges
+	> connects network segments
+	breaks up and segments traffic
+	layer 2
+	
+  
+Repeaters
+	> increase signals 
+	amplify (power) 
+	regenerate (clean)
+
+Routers
+	> move data across different networks
+	segmentation/subnetting
+	manage traffic flow
+
+	in order for a router to know where to go next, 
+	it must have a table to send data too and allows for data to be sent outside of the network	
+	
+	> manage tables
+	send data where?
+	static vs dynamic
+	protocols, eigrp, ospf
+	
+	> default gateway
+	router only addresses direct packets
+	set to send to unknown destination
+
+Routing Tables
+	> where to pass on data
+	destination network IP/SM
+	nxt router to get there
+	number of ‘hops’
+	protocols help determine fastest path
+	
+
+
+Route Print
+	> view computer routing table
+
+
+
+Routing Metrics
+	> qualities used to determine best path
+
+Hop Count (tracert)
+	> how many other routers does a signal need to pass?
+
+Maximum transmission Unit (MTU)
+	> maximum size of a single packet we can send
+
+Casts
+	> reliability
+
+Latency
+	> amount of delay we have on a link.
+
+Link State
+	> cost-based protocol
+	best path (fastest)
+	multiplefactors (distance, speed, etc)
+	i.e. 	Open Shortest Path First (OSPF), 
+		Intermediate System-Intermediate System (IS-IS)
+
+Distance Vector
+	> based on the number of ‘hops’
+	uses # of hops
+	routing by rumor
+	exchange of routing tables
+	rip v ripv2
+
+Hybrid
+	> mixture of distance vector and link state
+	uses ‘hop’ count and cost
+
+IGP (Interior Gateway Protocol)
+	> inside autonomous network
+
+	RIP (Routing Information Protocol)
+		> distance vector (hop)
+		no more than 15 hops
+		no classless
+
+	RIPv2
+		> more hops
+		supports classless
+
+	OSPF (Open Shortest Path First)
+		> most used IGP
+		link state analysis (cost)
+		supports classless
+
+	IGRP (Interior Gateway Routing Protocol)
+		> CISCO distance vector (hop)
+		more hops than RIP
+		no classless
+
+	EIGRP (Enhanced IGRP)
+		> CISCO hybrid (hop and cost)
+		supports classless
+
+	IS-IS (Intermediate System to Intermediate System)
+		> just like BGP but part of IGP
+		used for routing between autonomous system
+
+EGP (Exterior Gateway Protocol)
+	> used for connecting external networks and routers
+	
+	utilizes BGP
+
+	BGP (Border Gateway Protocol)
+		> path vector protocol
+		similar to distance vector except only one ‘speaker’ node for domain
+		which reduces traffic and helps manage information sent out over the exterior
+
+
+Dynamic Routing Tables
+	> routing table can be static or dynamic
+	static routing table requires information to be manually entered by hand
+	dynamic routing automatically finds the best route
+	dynamic routing uses either IGP or EGP
+
+Convergence (steady state)
+	> when all of the routers have all of the same topology information/routing information
+	routers are communicating with each other and they all have the same ideas on how to get to a particular server
+	network routing ‘nirvana’
+	occurs at different rates
+	i.e.	network size
+		type of routing protocol
+		hardware/device problems
+
+
+Spanning Tree Protocol
+	> bridge connect network segment
+	can cause loops during broadcast
+	prevents a packet from doing an endless loop in a network
+	sends out a packet that lets spanning tree protocol know not to send data on certain links
+	certain bridge can block off its link to other bridges which prevents loops
+	turning certain links to blocking mode
+	most direct path may not be used 
+	when devices go offline other links will be unblocked
+
+
+Broadcast Domain
+	> an area of a network where a broadcasted message can reach and are all the devices in a network 
+	that can be reached at OSI Layer 2 and it anywhere that a link does not pass through a router
+	> all nodes can reach each other by broadcast at the data link layer
+	> a domain in which a broadcast is forwarded
+	> routers don’t forward broadcasts from one broadcast domain to another
+
+Collision Domain 
+	>  involve two devices trying to communicate simultaneously and therefore creating data collisions
+	> can happen on links connected to devices as well as devices connected to a hub
+	> occurs when more than one device attempts to send a packet on a network segment at the same time
+	> packets collide and both devices must send the packets again, which reduces network efficiency
+
+
+Virtual Local Area Networks (VLANs IEEE 802.1Q)
+	> allow us to segment a large network
+	help to segment large networks
+	cut down on traffic on make networks a bit more secure
+	broadcasts go to the same VLAN and are composed of two major port types
+
+	Access Ports
+		> allow us to connect devices in one particular VLAN to a switch (device to switch)
+	Trunk Ports
+		> allows us to connect different switches to multiple VLANS (switch to switch)
+
+	filter with different criteria depending on how they’re configured
+		> Physical Port (manual)
+		> MAC Addresses
+		> Sub netting IP Addresses
+
+Port Mirroring
+	> aka SPAN Port (Switch Port ANalyzer)
+	configure port to have all data mirrored to it
+	captures network data
+	devices can't talk on this port (unless a second NIC is set)
+	diagnostics/research/Intrusion Detection/Prevention System
+		IDS > connected to switch only
+		IPS > switch and firewall
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

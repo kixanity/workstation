@@ -1,0 +1,95 @@
+TCP/IP Suite
+	> The TCP/IP suite is all of the different protocols all applied together so computer are able to communicate with one another across a network
+	
+	Transmission Control Protocol (TCP)
+		verified delivery to endpoint with one-to-one communication
+	Internet Protocol (IP)
+		delivers packets to devices and maps between logical (IP) and physical (MAC)
+		routable protocol
+
+
+	7	Application	FTP SSH HTTP TFTP
+	6	Presentation	TLS
+	5	Session		DNS
+	4	Transport	TCP UDP
+	3	Network		IP ICMP IGMP DHCP RIP OSPF IGRP EIGRP
+	2	Data Link	ARP
+	1	Physical 	NICs
+
+
+Communication Protocols within the TCP/IP
+	> set of rules/protocols that dictate how packets are transferred
+	determine how packets are formed and sent
+	how to break up data into pieces and send it where it needs to go
+	layer 4
+
+	Transmission Control Protocol (TCP)
+		> connection oriented protocol
+		supports larger packet sizes
+		numbered
+		retransmission
+		1 is to 1
+		3 way handshake
+			syn
+			syn/ack
+			ack
+	
+	User Datagram Protocol (UDP)
+		>  does not need to verify a connection prior to sending data
+		all about getting data to where it needs to go quickly
+		small packet sizes
+		connectionless
+		no error recovery
+		distinct chunks
+		can be broadcast
+
+	Size of Ethernet frame - 24 Bytes
+	Size of IPv4 Header (without any options) - 20 bytes
+	Size of TCP Header (without any options) - 20 Bytes
+	So total size of empty TCP datagram - 24 + 20 + 20 = 64 bytes
+
+	Size of UDP header - 8 bytes
+	So total size of empty UDP datagram - 24 + 20 + 8 = 52 bytes
+
+
+This lesson focuses on protocols that do not really have port numbers; these are network and data link protocols.
+
+Internet Control Message Protocol (ICMP)
+	> delivers errors and queries to determine if a service is available
+	doesn’t really transmit information
+	simply a packet of data
+	ping - echo request
+	traceroute
+
+Internet Group Management Protocol (IGMP)
+	> multicast membership
+	manages how messages go out to different computers
+
+Address Resolution Protocol (ARP)
+	> allows computers to discover which IP address is associated with which physical addresses (MAC)
+	helps us discover what specific network interface card a packet is being sent too
+	requests allow us to form tables so we can map ports to different MAC addresses and send specific packets to specific MAC addresses
+	layer 2
+	man in the middle attack
+	ARP poisoning
+
+
+Port Communication Endpoints
+	> allow for multiple applications to use net connections 
+	reserved by programs and applications
+	65 535 ports per net connection
+	defaults can be changed
+	ports communicate over TCP/UDP 
+	layer 4
+
+
+
+
+
+
+
+
+
+
+
+

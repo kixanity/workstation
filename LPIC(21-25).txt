@@ -1,0 +1,84 @@
+21 - Manipulating Text sed
+	sed - stream editor for filtering and transforming text
+	$sed 's/from/to/g' <file>
+		[Cc] - either
+		^ - beginning of the line
+
+22 - File Management
+	---
+
+23 - The Find Command
+	find files using name in current directory
+		$find . -name abc.txt
+
+	find all .txt files in directories abc
+		$find /home/abc -name '*.txt'
+
+	find files using name and ignoring case
+		$find /home/abc -iname abc.txt
+
+	find directories abc
+		$find / -type d -name abc
+
+	find files based on their permissions (permission 777)
+		$find / -type f -perm 0777 -print
+
+	find file with permission 777 and change the permission to 755
+		$find / -type f -perm 0777 -exec chmod 755 {} \;
+
+	find all the files that were modified 10 days modified back
+		$find / -mtime 10
+	more then 1 day ago
+		$find / -mtime +1 
+	less then 2 days ago
+		$find / -mtime -2
+
+	creation time
+		$find /dir -cmin -60
+	modification time		
+		$find /dir -mmin -60
+	access time
+		$find /dir -amin -60
+
+	find all the file more than 10mb
+		$find / -size +10M
+
+24 - Using tar, cpio, and dd 
+	dd - convert and copy a file (mostly used on block devices)
+		$dd if(inputfile)=</dev/> of(outputfile)=</dev/ or .img> bs(blocksize)=4k
+
+	tar — The GNU version of the tar archiving utility
+		$tar -cvf <output file.tar> <what to include>
+		$tar -cvzf <output file.tar.gz> <file to extract>
+			with g[z]ip
+		$tar -xvf <file to extract>
+
+	cpio - copy files to and from archives
+		$ls/find | cpio -o(output to something) > <file.cpio>
+		$ cpio -id(input from, make directories) < <file.cpio>
+
+25 - Compressing with Gzip and Bzip2
+	gzip, gunzip, zcat - compress or expand files
+		$gzip <file>
+		$gunzip <file.gz>
+		tar + z .tar.gz/.tgz
+
+	bzip2, bunzip2 - a block-sorting file compressor, v1.0.6
+	bzcat - decompresses files to stdout
+	bzip2recover - recovers data from damaged bzip2 files
+		$bzip2 <file>
+		$bunzip2 <file.bz2>
+		tar + j .tar.bz2/.tbz
+
+
+
+
+
+
+
+
+
+
+
+
+

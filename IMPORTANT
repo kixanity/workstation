@@ -1,0 +1,52 @@
+‘‘‘‘‘‘‘ ’’’’’’’
+
+#share internet from server
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+
+#delete via inode number
+find -inum ### -delete
+
+#check if installed
+apt-cache policy ssh
+
+#compression
+tar -cvf new.tar /dir/file.txt
+	[c]ompress
+	[v]erbose
+	with g[z]ip
+	[f]orce
+	e[x]tract
+gzip new.tar
+tar -cvzf new.tar.gz /dir/file.txt
+
+#mlocate
+locate asdasd
+sudo updatedb
+sudo vi /etc/updatedb.conf
+
+#open folder gui
+sudo apt-get install libgnome2-bin
+gnome-open /dir
+xdg-open /dir
+nautilus /dir
+
+#groupscommand
+compgen -g
+getent group name
+groups username
+
+#passwordrecovery
+recovery mode
+root
+mount -n -o remount,rw /
+passwd ralaco
+
+
+nslookup fb.com
+
+####Converting a file to uppercase/lowercase
+dd if=file1 of=file2 conv=ucase/lcase
+
+####create a big file 
+dd if=/dev/zero of=testfile bs=1024 count=25000
+	block size = 1kb * 25000 = 25mb

@@ -1,0 +1,78 @@
+06 - Boot Time Kernel Commands and the Init Systems
+	Single User mode
+		must be at console
+		can change root password
+			'a' to modify the kernel arguments before booting
+			add ' single'
+	
+	SysVinit
+		runlevels
+		numbered order
+		lots of symlinks
+		not overly efficient start up time
+	Upstart
+		faster startup
+		start order not just numerical
+		backward compatible
+	Systemd
+		systemctl
+		uses binary code not just scripts
+
+07 - Managing Runleves with SysVinit
+	Debian/Ubuntu
+		0 - Halt
+		1 - Single User Mode
+		2 - Full, Multi user, GUI if installed
+		6 - Reboot
+	CentOS/Suse
+		0 - Halt
+		1 - Single User Mode
+		2 - Multi user, no networking
+		3 - Multi user, with networking
+		5 - Multi user GUi
+		6 - Reboot
+
+	$runlevel
+	$telinit <#>
+
+	$vi /etc/inittab - default runlevel
+
+08 - Managing Boot Targets with Systemd
+	0 - poweroff
+	1 - rescue
+	3 - multi-user
+	5 - graphical
+	6 - reboot
+
+	$systemctl isolate multi-user(.target)
+	$systemctl get-default
+	$systemctl set-default graphical(.target)
+	$ls /etc/systemd/system
+
+	locations	
+		/etc/systemd/system/
+		/usr/lib/systemd/system/
+
+09 - Proper Halting and Rebooting of Your System
+	$telinit 0 - $systemctl isolate poweroff.target
+	$telinit 6 - $systemctl isolate reboot.target
+
+	halt - sometimes doesn't power off
+	poweroff - sends ACPI power off signal
+
+10 - Partitions & Mount Points
+	boot: small, just holds kernel
+	home: can be busy, usually large
+	var: very active, tends to fill up
+	4 primary partitions
+
+
+
+
+
+
+
+
+
+
+

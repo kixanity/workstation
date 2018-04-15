@@ -1,0 +1,57 @@
+Network Management Documentations
+
+Documentation is essential for maintaining the integrity and management of a network
+
+Wiring scheme
+	> wiring infrastructure information
+	such as PIN standard, cable types/maps and diagrams
+
+Cable management
+	> physical management of cabling
+	helps to make them visually appealing
+	helps with identification
+	cooling
+	safety
+
+Network maps
+	> physical and logical layouts
+	ip address, devices, vlans, topology, port maps
+	inconjunction with wiring schemes
+
+Documentation
+	> network topology, wiring schemes
+	device configs, port layouts, server roles, device logins
+	firewall rules, contact info
+
+(Maybe you know it now, but sooner or later you might forget some of it
+or the next person to sub you if youre working as a team, it doesnt mean team if the only one
+who can get the work done is you)
+the next person might WHHHAT
+
+
+Asset management
+	> manages and keeps accountability
+	accountability for physical devices
+	device serial numbers (who bring homes what)
+	database to track devices
+	login information for devices
+	keep devices secure/up to date
+	track warranties
+
+Baselines
+	> reference point for normal functions (periodically)
+	network throughtput/traffic
+	data sent/received
+	create with network capture or performance monitor
+
+Change management
+	> how to handle modifications
+	approval cycle
+	test implementation
+	documentation/accountability
+	(like a team who's to be approached when something is to be changed)
+
+
+
+keep it available detailed and updated
+anyone who needs can be use it as a reference and can easily understand it

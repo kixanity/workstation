@@ -1,0 +1,90 @@
+36 - Formatting partitions
+	btrfs - snapshots, compression, auto defrag
+	reiserfs - very space efficient with small files
+	xfs - good for large partitions, getting outmoded
+	ntfs - microsoft
+	fat32 - microsoft
+
+	mkfs - build a Linux filesystem
+	mkswap - set up a Linux swap area
+		$mkfs.ext2
+		$mkfs.msdos
+		$mkfs.ntfs
+		$mkfs -t ext4 <dev>
+		$mke2fs - make ext2 filesysyem
+		$mke2fs -j - make ext3 filesystem
+
+	GNU Parted - a partition manipulation program
+		$parted /dev/sdb
+			--help
+			--print
+		$mkswap /dev/sdb2
+		$mkfs.ext4 /dev/sdb1
+
+37 - Maintaining Filesystems
+	tune2fs - change ext2 to ext3
+	dumpe2fs - show all super block info
+	debugfs - interactive filesystem editor
+	
+	fsck - check and repair a Linux filesystem
+		auto detects file system
+		smart about xfs
+
+		$fsck /dev/sda1
+		$fsck -N /dev/sda1
+
+	$mkfs -t xfs -f /dev/sdb34k
+
+	
+	
+	xfs - layout of the XFS filesystem
+		xfsprogs package must be installed
+		
+		xfs_info - shows info
+		xfs_check - complete check of filesystem
+		xfs_repair - checks and fixes problems
+		xfs_repair -n - similar to xfs_check 
+
+38 - Mounting and Unmounting
+	 fstab - static information about the filesystems
+		$mount -o ro < >
+			mounts as read-only
+		$mount -o remount < >
+		$mount -o remount, rw < >
+			remounts
+
+39 - Drive Quotas
+	quota - display disk usage and limits
+		$apt-get install quota
+		
+		1. fstab <dev> <src> <type> <defaults,usrquota,grpquota>
+		2. mount
+		3. cd
+		4. $quotaoff <dev>
+		5. $quotacheck -cug <dev>
+				[c]reate [u]ser [g]roup
+		6. $quotaon <dev>
+		7. $edquota -u <user> <dev>
+
+		   $setquota -u <user> 30000 35000 0 0 <dir>
+				30M blocks softlimit
+				35M blocks hardlimit
+				0 inodes limit
+
+		8. $repquota <dev>
+		   $repquota -a
+
+		$edquota -up <orig_user> <new_user>
+			[p]rototye    copies quota settings
+
+40 - File Ownership & Permissions
+	---
+	
+
+
+
+
+
+
+
+	

@@ -1,0 +1,69 @@
+###Appropriate hardware tools to troubleshoot network productivity
+
+Cable testers 
+	> verify connection and the correct pin out
+	may have a remote tester
+	(https://www.youtube.com/watch?v=jWhGBrOz8o0)
+
+Toner probes 
+	> trace wire and cable
+	generator produces tone and the probe listens for tone
+	(https://www.youtube.com/watch?v=JHRIiw3OR6Y)
+
+Cable certifiers 
+	> verifies bandwidth and frequency
+	tests many types of cables
+	(http://ideal-international.com/media/img/whatsnew/press_releases/2009-07-31_bicsi_lantek2_print.jpg)
+
+Butt sets 
+	> Tests plain old telephone system (POT) connection
+	demark to provider
+	connects to line then calls looking for a signal
+	Butt sets are used when installing an Internet connection
+	(https://www.youtube.com/watch?v=hR_YSwLJmhM)
+
+
+Crimper 
+	> used for cable termination, but it can also be used to cut and strip cables
+	can be used on Ethernet, coaxial and fiber cables
+	can also correct terminating ends and wire sequence
+	When setting up and crimping a cable, leave as little excess as possible outside the connector as that can cause interference
+	(http://dorianblog.info/wp-content/uploads/crimper-rj45.jpg)
+
+Punch down tool 
+	> can terminate connection into a block or patch panel or a keystone
+	When using this tool, be careful of the blade size and the cutting edge as different size tools are meant for different size cables
+	(http://www.fiber-optic-solutions.com/wp-content/uploads/2016/11/punch-down-process.jpg)
+
+Protocol Analyzer
+	> used to plug into the network and analyze the traffic
+	a hardware device and it can be installed on a laptop or it can be a stand-alone device (wireshark)
+	It is like being able to look inside a wire and see what’s going on
+
+Loop Back Plug
+	> a device that sends cables back
+	uses software to compare sent and received signals
+	(http://cdn2.bigcommerce.com/server2000/a3103/product_images/uploaded_images/fibre-channel-loopback-fchssdc2-lb-angle.jpg)
+
+Time domain reflectometer (TDR)
+	> device which sends signals and listens to reflections back
+	estimate cable length
+	find cable faults and splices
+	(https://www.youtube.com/watch?v=jrjKAssUN2c)
+
+Optical time domain reflectometer (OTDR)
+	> TDR used for fiber
+	(http://www.interfaceindia.in/products/yokogawa/images/AQ7275%20OPT%20TM%20DMN%20RFLCTMTR.jpg)
+
+Multimeter 
+	> measures electricity for resistance, current, voltage and continuity
+	(https://www.tmatlantic.com/upload/iblock/7fb/AM-1016_accessories.jpg)
+
+Environmental monitor
+	> monitors the environment for humidity, temperature and air particles (dust level)
+	 (http://www.42u.com/wp-content/uploads/nti-enviromux-mini-lxo.jpg)
+
+
+
+
+

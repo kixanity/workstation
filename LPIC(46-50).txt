@@ -1,0 +1,21 @@
+46 - User Profiles & System Profiles
+	Login Shell
+		/etc/profile		#PATH variable
+			/etc/profile.d/*		
+				/home/user/	.bash_profile
+						.bash_login
+						.profile
+						###loads the first one it sees
+					/home/user/.bashrc	#interactive shell only loads this
+
+			/etc/bashrc  OR  /etc/bash.bashrc
+
+	Interactive Shell
+		/etc/bash.bashrc
+			/home/user/.bashrc
+
+	.bash_logout 	#clears the console in the login shell
+
+	/etc/skel
+
+47 - Scripting Basics

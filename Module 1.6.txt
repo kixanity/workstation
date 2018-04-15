@@ -1,0 +1,105 @@
+Protocols
+
+File Transfer Protocol (FTP)
+	> :21 TCP
+	no encoding/overhead
+	insecure
+
+Secure File Transfer Protocol (SFTP)
+	> :22 TCP
+	encrypts with SSH
+	more secure than FTP
+	
+Trivial File Transfer Protocol (TFTP)
+	> :69 UDP
+	allows us to send to multiple clients at once
+
+Hypertext Transfer Protocol (HTTP)
+	> :80 TCP
+	works in web browsers
+	browser sends a ‘get’ request to a web page
+	all the information is in interpreted into what we see on the screen when we access a web site
+	all information passed over HTTP is in clear text
+
+Hypertext Transfer Protocol Secure (HTTPS)
+	> :443 TCP
+	encrypted HTTP
+	certificate between client/server
+	used on banking web sites
+	information is not in Clear Text
+
+Telnet
+	> :23 UDP/TCP
+	remote terminal connection
+	unencrypted
+	replaced by SSH
+
+Secure Shell (SSH)
+	> :22 TCP
+	encrypted connection between points 
+	may work with other protocols
+
+Remote Desktop Protocol (RDP)
+	> :33389 TCP/UDP
+	accessed via remote desktop
+	may need to be blocked
+
+Simple Network Management Protocol (SNMP)
+	> :161 (agent)
+	:162 (manage)
+	manage certain devices over an IP network
+	routers, printers, etc.
+	agent is on device and addressed by management
+
+Network Time Protocol (NTP)
+	> :123 UDP
+	set up different devices to synchronize time across a network
+
+Transport Layer Security (TLS)
+	> port ‘varies’
+	successor to Secure Socket Layer
+
+Domain Name Systems (DNS)
+	> :53 TCP/UDP
+	resolve fully qualified domain names to IP addresses
+	or IP addresses to fully qualified domain names
+	transmit a query to a particular server and find out a specific IP address (such as google.com)
+
+Dynamic Host Configuration Protocol (DHCP)
+	> :67 UDP
+	use to automatically get IP address information
+
+
+Session Initiation Protocol (SIP)
+	> :5060 non-encrypted TCP/UDP
+	:5061 encrypted with TLS
+	initiates a session but does not carry any data
+	initiates opening a port for communication over RTP
+
+Real Time Protocol (RTP)
+	> :16384 - 32767 UDP
+	can be used to stream audio and video and is able to detect out of sequence arrivals and make appropriate adjustments
+
+
+Mail Protocols
+
+Simple Mail Transfer Protocol (SMTP)
+	> :25 TCP 
+	sends email from a client to the server
+	email between servers and from outlook
+	i.e. outlook > microsoft > yahoo
+
+Post Office Protocol 3 (POP3)
+	> :110 TCP
+	email comes from client download from server
+	default copies then deletes
+
+Internet Message Access Protocol (IMAP)
+	> :143 TCP
+	downloads from server to client
+	keeps a copy of the message on the server
+	more configuration ability than a POP3
+
+
+
+

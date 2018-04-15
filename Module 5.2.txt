@@ -1,0 +1,73 @@
+Access Control List (ACL)
+
+Media access control (MAC) filtering
+	> based on MAC address
+	manually record/set rules
+	can be spoofed
+
+IP filtering
+	> filter by IP
+	set static/reservations
+	can be spoofed
+
+Port filtering
+	> port ACL filter ingress and/or egress traffic on certain port
+	access ports/trunk ports
+	utilize MAC/IP filtering
+	disable unused ports
+	layer 2/3
+
+
+Tunneling
+
+Virtual Private Network (VPN)
+	> encrypted private tunnel over a public network
+	creating a private network on a public interface
+	tunneled/encrypted connection over a public network
+	can essentially be on a private network
+	
+	Client to Site
+		remote access VPN
+		may utilize speacial client software
+
+	Site to Site
+		connect two sites (e.g. businesses)
+		cheaper than leased line
+		persistent or dial on demand
+
+	
+Secure Socket Layer (SSL)
+	> web browser based VPN (HTTPS)
+	uses certificate for manual authentication
+ 
+
+Transport Layer Security (TLS)
+	> more common HTTPS
+	certificates
+
+Transport Layer Security 2 (TLS2)
+	> enhanced security, hashing checks
+
+Peer to Peer Tunneling Protocol (PPTP)
+	> Older dialup protocol
+	adds client on virtual node
+	has weak encryption/hashing
+	not recommended
+
+Layer 2 Tunneling Protocol
+	> carries layer 2 traffic
+	no encryption by itself but utilizes IPsec, RADIUS and TACAS +
+
+
+
+
+
+Terminal Access Controller Access Control System
+
+IPSec/IP Security
+
+
+
+
+
+

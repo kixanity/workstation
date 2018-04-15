@@ -1,0 +1,94 @@
+Network Categories
+
+Local Area Network (LAN)
+	> these tend to be inside offices and schools
+	limited geographic area
+Wide Area Network (WAN)
+	> multiple local area networks
+	internet
+Personal Area Network (PAN)
+	> Bluetooth and Infared
+Metro Area Network (MAN)
+	> located in a college or city
+	cables/wiMAX
+	
+
+Peer to Peer
+	> a network in which clients talk to clients
+	they share files and folders
+	easy to set up and install but has limited scale/performance
+
+Client Server
+	> allows clients to be connected through a server and it is seen in the domain
+	initial set up of a client server is harder,
+	however it’s more scaleable and provides for better performance
+
+
+Point to Point
+	> one device is connected to another device
+	sometimes referred to as ‘on link’
+
+Point to Multipoint
+	> when single point goes to multiple points and is used in multicasting
+	signals are sent to everyone who is connected
+	this can pose a security threat as it can allow for one user to sniff out the traffic that is happening on the hub
+
+
+Network Topologies
+	> A topology is a layout of a network both physically and logically
+	the way computers are connected
+	what they look like and how they send and receive data
+
+
+Mesh
+	> some nodes are connected to more than one node
+	allows for your traffic room so more data can be passed on
+	can be expensive to set up and difficult to maintain	
+
+	fully meshed
+		computers connected to more than one node
+		every computer is connected to every other computer
+	
+	partially meshed
+		some computers are connected to all the computers
+		while some computers are just connected to one other computer
+
+		still have computers that are connected to multiple other computers
+		but not every computer is connected to every other computer
+
+Ring
+	> all of the nodes are connected to form a loop between them
+	data is transferred using a token
+		A token is a data indicating endpoint
+	clears/passes/set token
+	fewer collisions and allows for equal access
+	one workstation down, all down
+	passes data on to every computer, if one workstation gets it; they all get it
+
+Bus
+	> all of the nodes are connected to a single cable
+	very common in set ups when there is a T axle on each node as well as in 10-base-5 networks
+	all signals are sent using broadcast
+	has the least cost and set up; it is also good for small networks
+	limited length and if one node goes down, everything goes down
+
+Star
+	> all components connect to a central hub which manages all the data connections (smart or dumb)
+	easy to set up and expand
+	better traffic handling
+	offers ease in troubleshooting
+	has a single point of failure; there is no other fallback method for the devices to communicate with each other
+
+Hybrid
+	> either a mixture of two topologies: peer to peer and client to server
+	also involve a mix of mesh, bus, ring and star topologies
+	flexible and expandable and makes for better trouble shooting
+	can be costly
+	the setup is intricate and complex
+
+Multi-Protocol Label Switching (MPLS)
+	allows multiple topologies to communicate together over the same connection
+	used to communicate over a backbone and transmits over a layer edge router (LER)
+
+
+

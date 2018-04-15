@@ -1,0 +1,38 @@
+16 - Using rpm2cpio and yumdownloader
+	cpio - copy in copy out
+	
+	files > cpio > rpm
+	rpm2cpio file.rpm > cpio -idv>file.cpio > original file structure
+
+17 - Command Line Intro
+	&& - if first command is executable then do second command
+	; - two commands one line
+
+18 - Working with Environmental Variables
+	Setting PATH
+		$PATH=/home/user/bin:$PATH
+		$export PATH=/home/user/bin:$PATH
+	Unsetting PATH
+		$unset PATH
+	
+19 - Manipulating Text Head, Tail, Cat, Split
+	split -l <# of line> <file name> <prefix>
+
+20 - Manipulating Text Paste, Join, Expand, Unexpand
+	paste - merge lines of files
+		puts a tab
+
+		$paste <txt file 1> <txt file 2>
+		$paste <txt file 1> <txt file 2> > <new joined file>
+		
+	join - join lines of two files on a common field
+		uses numbers to connect
+
+		$join <txt file 1> <txt file 2>
+
+	expand - convert tabs to spaces (just like cat)
+	
+	unexpand - convert spaces to tabs
+		$unexpand -a(all) <file>
+
+

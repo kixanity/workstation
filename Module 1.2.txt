@@ -1,0 +1,75 @@
+MAC Address (Media Access Control)
+	> Layer 2 (Data Link)
+	Physical Address
+
+IP Address
+	> Layer 3 (Network Layer)
+	Logical Address mapped to physical
+
+EUI-64 (Extended Unique Identifier)
+	> Layer 2 (Data Link)
+	IPv6 global unicast
+	No more logical to physical
+
+Frames
+	> Layer 2 Protocol Delivery Unit
+	Segment of Data 
+
+Packet
+	> Layer 3 Protocol Delivery Unit
+	Segment of Data with Begin/End
+
+Switch
+	> Layer 2 (Data Link)
+	Map to MAC Address
+
+Router
+	> Layer 3
+	Sometimes called layer 3 switch
+	Moves Data Access Network
+
+Multi-device Switch
+	> Layer 2 / 3
+	Perform at multiple layers
+
+Hub
+	> Layer 2
+	Passes info to everyone
+
+Encryption Device
+	> Layer 6
+	Formats Data
+
+Cable
+	> Layer 1
+
+NIC
+	> Layer 1
+
+Bridge
+	> Layer 2
+	Point to point
+
+
+The layer 1 (Physical layer) PDU is the bit or, more generally, symbol (can also be seen as ‘stream’).
+The layer 2 (Data link layer) PDU is the frame.
+The layer 3 (Network layer) PDU is the packet.
+The layer 4 (Transport layer) PDU is the segment for TCP or the datagram for UDP.
+
+1 Physical	> Touch, Measure, See
+2 Data Link	> Point to Point Connectivity
+3 Network	> IP Addressing/Routing
+4 Transport	> TCP/UDP
+5 Session	> Connection Management
+6 Presentation	> Format Data
+7 Application	> Application Management
+
+
+
+
+
+
+
+
+
+

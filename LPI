@@ -1,0 +1,22 @@
+BIOS
+	hardware configuration
+	boot device order
+
+SysV reboot
+	shutdown -r now
+	telinit 6
+
+init systems used within Linux systems
+	upstart
+	sysv init
+	systemd
+
+file in the /proc filesystem lists parameters passed from the bootloader to the kernel
+	cmdline, /proc/cmdline
+
+lspci command display about the system hardware
+	Device IRQ settings
+	PCI bus speed
+	Device vendor identification
+
+

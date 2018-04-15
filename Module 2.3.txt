@@ -1,0 +1,48 @@
+Dynamic Host Configuration Protocol
+	> provides automatic IP addressing, subnet mask and default gateways
+	functions on broadcast which only goes to devices and components within a specific broadcast domain so they won’t propagate over a router
+	device to hand out addresses
+	NIC to ‘obtain address auto’
+	It is important to remember there is also an APIPA address
+	APIPA stands for Automatic Private Internet Protocol Addressing
+	This is what we will get on a client if DHCP fails to give us an IP address
+
+	DHCP Process
+		Discover > Offer > Request > Ack
+
+Static
+	access devices should be static
+	statch devices can be on DHCP
+	create reservation
+
+Dynamic
+	set ranger (scope)
+	set lease
+	When an address is given out DHCP, they are only good for a finite period
+	DHCP servers allow us to lease a period of time that an IP address is good for
+
+Reservations
+	> settings on a DHCP server which reserves a specific IP address for a device with a specific MAC address
+
+Scopes
+	> discover a range of IP addresses that the DHCP server will give out
+	not all addresses must be set
+	80/20 rule: Multiple DHCP servers
+
+Leases
+	> how long IP addresses are good for
+	lease can be renewed and extended if the address is still available
+	devices attempt renewal after 87.5% of lease
+	
+	Renewal process
+		client asks for renewal
+		dhcp either extends lease or no response
+
+
+
+
+
+
+
+
+

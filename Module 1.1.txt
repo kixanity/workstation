@@ -1,0 +1,85 @@
+Open Systems Interconnection
+
+Please Do Not Throw Sausage Pizza Away
+People Don't Need To See Paula Abdul
+
+Physical	> eletrical
+		cables and bits
+		wireless data travelling back and forth
+		things that can be hold
+		NIC
+		voltage
+		pinouts
+		cable specifications
+
+Data Link	> access
+		physical addressing
+		access to a computer
+		access to a device
+		package bits/data into frames
+		MAC address
+		transfer from point to point
+		taking packets and sending out to diffent computers
+		(Frames are segments of data that we are pushing over layer 2 connectivity. 
+		It is a transfer from point to point and MAC addresses.)
+		
+Network		> ip layer
+		path
+		routing
+		assigns/converts MAC address to IP address
+		transferring data through one to more networks
+		looking at ipdresses then sending them to different destinations
+		fragmentation/reassembly
+		packets
+		routers
+		logical addresses are translates into physical and network routing
+
+Transport	> management/control
+		transfer of data
+		split communications into packages
+		making sure where it needs to go
+		helps to transfer data that we send and receive
+		verification or no verification of delivery
+		TCP(receipt)
+		UDP(no verify)
+		
+
+Session		> traffic control
+		traffic control layer
+		shipping manager
+		session
+		controls connections between computers
+		coordinates conversations
+		connections are established, managed and terminated
+		regulates when computer can send when, what, how much
+
+Presentation	> formats data
+		encryption/decryption
+		translates applications into data so it can be understood and displayed by the application layer
+
+Application	> network access
+		enables apps to access network
+		identify communication partners
+		determine resources available
+		helps to synchronize communications
+		includes: SMTP, HTTP, FTP
+
+
+TCP/IP
+
+Never Ingest Toxic Apples
+
+Network Interface	> 1 2
+Internet Layer		> 3
+Transport Layer		> 4
+Application Layer	> 5 6 7
+
+
+
+
+
+
+		
+
+
+

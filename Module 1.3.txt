@@ -1,0 +1,156 @@
+IP Addresses
+	This lesson focuses on how IP addresses fit into the OSI Model.
+	IP addresses are logically mapped addresses that map to a physical address.
+	IP addresses aren’t mapped to a computer and can be mapped to any MAC we want, they can change and move.
+	They are not hard encoded and are set statically.
+	An IP address is a 32-bit binary address and is divided into four sections called octets, this is because each section has eight numbers.
+	Participants learn how to calculate octets using a specific numerical sequence, starting with one and incrementing our way up by powers of 2.
+	 
+Structure / Binary
+	> IPv4 are 32-bit addresses
+	divided into 4 octets
+	sections in power of 2
+	0-255
+
+	128 64 32 16 8 4 2 1
+
+Class A
+	> 1.0.0.0 - 126.0.0.0
+	> 255.0.0.0
+Class B
+	> 128.0.0.0 - 191.255.0.0
+	> 255.255.0.0
+Class C
+	> 192.0.0.0 - 223.255.255.0
+	> 255.255.255.0
+Class D (multicasting)
+	> 224.0.0.0 - 239.0.0.0
+
+
+APIPA	> Automatic Private IP Address
+	169.254.0.0 to 169.254.255.255
+	when DHCP is unavailable
+	which is not good
+
+	This lesson covers APIPA which stands for Automatic Private Internet Protocol Addressing.
+	APIPA is an address which is automatically assigned to our IP address when no DHCP is received.
+	When an APIPA address is received, it means something is wrong and the DHCP server needs to be checked to see any issues with connectivity.
+	An APIPA address is unable to connect to the Internet and is unable to communicate with other computers.
+	This lesson also covers public and private IP addresses.
+	A public IP address is a singularly unique address for a computer that could be located anywhere in the world and is globally routable,
+	whereas a private IP address is an address that is not routable. 
+
+
+Private IPs
+
+Class A	10.0.0.0 - 10.255.255.255
+	255.0.0.0 ( /8 )
+
+Class B	172.16.0.0 - 172.31.255.255
+	255.240.0.0 ( /12 )
+
+Class C	192.168.0.0 - 192.168.255.255
+	255.255.0.0 ( /16 )
+
+
+CIDR	> Classless Inter-Domain Routing
+	CIDR allows us to have variable-length subnet masks.
+	Subnet masks within CIDR are not within the standard classes of A,B or C 
+	and CIDR notation is used when standard subnet masks do not work and allows us to break up subnet masks and work with IP addresses.
+
+
+IPv4 vs IPv6
+	AN IPV4 is a 32-bit address scheme, meaning it has 32 binary bits of data which are divided into four octets (sets of 8).
+	This provides us with 4 billion addresses which should be enough, in theory.
+	However, now we are running out with so many devices that connect to the Internet.
+	That’s where IPV6 comes in, which provides us with a 128-bit address which provides trillions of addresses.
+	Participants also learn about hexadecimals to determine binary values for IPV6 addresses.
+
+IPv4
+	32 bit
+	4 octets
+	4 billion addresses
+
+IPv6
+	128 bit
+	3.4×10^38 (340 trillion trillion trillion)
+	emit leading 0
+
+IPv6 Address representation
+
+	The 128 bits of an IPv6 address are represented in 8 groups of 16 bits each.
+	Each group is written as four hexadecimal digits and the groups are separated by colons (:).
+	An example of this representation is 2001:0db8:0000:0000:0000:ff00:0042:8329.
+
+	For convenience, an IPv6 address may be abbreviated to shorter notations by application of the following rules.
+
+	One or more leading zeroes from any groups of hexadecimal digits are removed; 
+	this is usually done to either all or none of the leading zeroes. For example, the group 0042 is converted to 42.
+	Consecutive sections of zeroes are replaced with a double colon (::). 
+	The double colon may only be used once in an address, as multiple use would render the address indeterminate.
+	RFC 5952 recommends that a double colon must not be used to denote an omitted single section of zeroes.[38]
+	An example of application of these rules:
+
+	Initial address: 2001:0db8:0000:0000:0000:ff00:0042:8329
+	After removing all leading zeroes in each group: 2001:db8:0:0:0:ff00:42:8329
+	After omitting consecutive sections of zeroes: 2001:db8::ff00:42:8329
+	The loopback address, 0000:0000:0000:0000:0000:0000:0000:0001, may be abbreviated to ::1 by using both rules.
+
+
+MAC	> Media Access Control
+	Physical address of Network Interface Card
+	Unique Worldwide
+	Layer 2 - Data Link
+	Hexadecimal Format
+	AA:AA:AA:AA:AA:AA
+	
+	Used in:
+	DNS
+	ARP
+	DHCP
+
+	MAC addresses allow us to make data link connections as well as point to point connections that are not routed through any router.
+
+
+Subnetting
+	First - Network ID (Even)
+	Last - Broadcast (Odd)
+	First usable = NetID + 1
+	Last usable = Next NetID -2
+
+	IP:		192.168.1.37/28		192.168.10.0/25
+	SM:		255.255.255.240		255.255.255.128
+	Extra Bits:	4			1
+	Host Bits Off:	4			7
+	(256) - N:	240			128
+	NetID:		32			0
+	Broadcast:	47			127
+	Usable Addr:	33-46			1-126
+	Net Increment:	16			128
+
+
+Unicast
+	IPv4 > 1 to 1
+	IPv6 > Linklocal, Sitelocal, Uniquelocal, Global unicast
+	A single computer (or node) talking to another single computer (or node)
+
+Multicast
+	IPv4 > 1 to many
+	IPv6 > 1 to many (use with anycast to replace broadcast)
+	One computer (or node) talking to many computers (or nodes)
+
+Broadcast (IPv4)
+	Broadcast to all in broadcast domain
+	One computer (or node) to anyone of anything in the broadcast domain, can be reached just by talking to the MAC address
+Anycast (IPv6)
+	Anycast to nearest/closest
+
+
+
+
+
+
+
+
+
+

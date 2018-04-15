@@ -1,0 +1,99 @@
+Network Performance Optimization
+
+it is important to assess a system for latency sensitivity
+Certain services are most sensitive to latency such as VoIP, video and RDP
+
+Latency sensitivity
+	> service is affected by a slow connection
+	methods for optimizing the network to help with latency sensitivity
+	certain services are more susceptible to latency
+	VoIP, video, remote desktop
+	such as when a video pauses to buffer
+	long delay during a Skype call
+
+High bandwidth 
+	> applications might be latency sensitive but they use a lot of network traffic
+	need to be watched applications (data capacity)
+	Services such as video and music streaming
+	file hosting or file sharing
+	cloud applications take up a lot of room on the network
+
+
+Quality of Service (QoS)
+	> helps to ensure priority of latency sensitive packets
+	can be built into network devices
+
+Traffic shaping
+	> can delay less important traffic
+	makes the most of available bandwidth
+	might be on the user end or on the ISP
+
+Load Balancing
+	> a method that distributes the workload across multiple devices
+	be as transparent as possible
+	allows for a high functioning system in that it has the least connections with the fastest response time
+		
+		round robin
+		least connections
+		fastest response time
+		weighted round robin
+
+Uptime
+	> the time services are available
+	Needs can vary and a certain percentage of uptime is included in the Standard Lease Agreement (SLA)
+	strong uptime is needed so people are able to use the network to work and accomplish their tasks
+	A strong uptime consists of the following components:
+		Redundancy
+		Power backup
+		Secondary Internet
+		Backup sites
+
+Methods which are necessary to maintain a high uptime in a network
+
+High Availability
+	> used to calculate allowed downtime and allow for high uptime
+	based on a business’ needs and the Standard Lease Agreement (SLA)
+	measured in percentages and shows the amount of time a network is available
+
+		90%		36.5 days/year		16.8 hours/week
+		99%		3.6 days/year		5.04 hours/week
+		99.9%		8.76 hours/week		10.1 minutes/week
+
+Caching Engines
+	> allows a network at different points to save frequently used resources so they are available when needed
+	results in improved connection speeds
+	reduce strain
+	load balancer, proxy server, local cache, etc
+
+Fault Tolerance
+	> essentially the act of having fail over devices available
+	preferably thee devices are automatic such as 
+		routers, switches and cables
+		ups, data backups, cold/warm/hot sites
+
+Common Access Redundancy Protocol (CARP)
+	>  allows multiple hosts on the same local area network to share a set of IP addresses
+	primary purpose is to provide failover redundancy, especially when used with firewalls and routers
+	multiple hosts share the IP
+	allows for transparent fault tolerance
+	each device has a shared IP and personal management IP
+	can be fail over or load balance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

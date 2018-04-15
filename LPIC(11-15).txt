@@ -1,0 +1,87 @@
+11 - RAID vs LVM
+	Redundant Array of Independent Disks
+		performance & reliability
+	Logical Volume Manager
+		flexibility
+
+12 - Bootloaders GRUB & GRUB2
+	GRand Unified Boot system
+		MBR > /boot
+
+	GRUB (legacy)
+		/boot/grub/menu.lst
+
+	GRUB2
+		/etc/grub2/grub.cfg
+		grub2-mkconfig -o <path>
+		/etc/default/grub
+		/etc/grub.d/
+		$grub2-install
+		
+			Debian/ Ubuntu
+				grub2 since 2009
+				backward compatible scripts
+				/boot/grub/grub.cfg
+				grub-install
+				grub-mkconfig -o
+
+			Enterprise 6
+				grub legacy
+				no grub2 tools
+				grub-install
+
+			Enterprise 7
+				grub2
+				no backward compatible scripts
+				/boot/grub2/
+				/etc/default/grub
+				/etc/grub.d
+				grub2-mkconfig -o
+
+13 - Managing Shared Libraries
+	/etc	
+		ld.so.cache
+		ld.so.conf
+		ld.so.conf.d
+
+	ldd - print shared object dependencies
+	ldconfig - configure dynamic linker run-time bindings
+
+14 - Using APT
+	repo info
+		/etc/apt/sources.list
+		/etc/apt/sources.list.d/*
+
+15 - Using YUM with RPM Files
+	Yellowdog Updater Modified
+		search
+		info
+		install
+		remove
+		provides
+		update
+	repo info
+		/etc/yum.conf
+		/etc/yum.repos.d/*
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

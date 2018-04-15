@@ -1,0 +1,86 @@
+sudo apt-get install git
+cd ~/
+mkdir <dir>
+echo "# test" >> README.md
+git init
+git config --global user.email "marky.acoba@yahoo.com"
+git config --global user.name "kixanity"
+
+
+
+####add file to remote repo
+<go to local repo directory>
+git init
+git add <file> or -A
+git commit -m "some label"
+git remote add origin git@github.com:kixanity/test69.git (ssh)
+git remote add origin https://github.com/kixanity/test69.git (https)
+git push -u origin master
+
+
+####adding ssh key
+sudo apt-get install xclip
+ssh-keygen -t rsa -b 4096  -C "<marky.acoba@yahoo.com>"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa.pub
+####github setting > ssh and gpg keys > create new ssh key
+cat  ~/.ssh/id_rsa.pub (copy all)
+
+####setting default
+git config --global push.default simple (current branch)
+git config --global push.default matching (push local branches with the same name)
+
+git push
+git pull
+git log
+git diff
+git status
+git reset or <file>
+git clone <url> <where to clone>
+
+git remote -v ()
+git branch -a
+
+git pull origin master
+
+####branching
+git branch <name of new branch>
+git branch -D <branch to delete>
+git checkout <where to login>
+
+####adding branch to remote
+git branch <name of new branch>
+git checkout <name of new branch>
+git add -all
+git commit -m "asdasd"
+git push origin <name of new branch>
+
+####merge
+git checkout master
+git merge <name of new branch>
+git push origin master
+
+####cloning branch
+git fetch origin <remote branch>:<to local branch>
+git fetch origin branch2:branch2
+git fetch --all(ALL)
+
+git checkout --track origin/<branch>
+
+####delete remote branch
+git push origin :<branch2>
+git branch -r
+
+####delete untracked files(not git added)
+git clean -f
+git clean -n (asks what will be removed)
+
+####gitignore
+touch .gitignore
+something.txt
+*.php | index.php (all php file but not index.php)
+
+
+
+
+

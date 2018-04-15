@@ -1,0 +1,50 @@
+02 - Integrated Hardware Devices
+	$lsmod - show status of modules
+	$modprobe < > - add and remove modules from kernel
+	/dev/
+	everything is a file
+	files are pointers to devices
+	hard drives and partitions
+
+03 - Removable Devices
+	hot plug - to go
+	cold plug - can't be plug on unplug while pc is running
+	$lsusb - list usb devices
+	$usb-devices
+	$lspci - list pci devices
+	$dmesg - print or control the kernel ring buffer
+
+04 - Dealing with Devices
+	proc - is the old one, it is more or less without rules and structure.
+		And at some point it was decided that proc was a little too chaotic and a new way was needed.
+
+	sysfs - created, and the new stuff that was added was put into sysfs like device information.
+
+	So in some sense they do the same, but sysfs is a little bit more structured.
+	
+05 - Linux Boot Process and Initrd
+	BIOS/UEFI > MBR > GRUB > Initrd > Kernel
+	
+	BIOS
+		Power On Self Test
+		activates onboard hardware
+		turns things over to boot device
+	MBR
+		512bytes of first HD sector
+		contains bootloader(grub) and partition info
+	GRUB
+		now GRUB2
+		replaces LILO
+		runs from mbr but can access hard drive
+		launches kernel or initrd
+	Initrd
+		initial ram disk
+		solves problen of 'kitchen sink' kernels
+		minimal linux kernel, which simply detects what kernel modules to load
+		then hands off to manin kernel
+		able to mount harddisks
+	Kernel
+		kernel loads
+		starts init process...
+			init is the program which starts all other programs
+

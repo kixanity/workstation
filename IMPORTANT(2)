@@ -1,0 +1,16 @@
+$lslogins - display information about known users in the system
+
+
+$usermod - modify a user account
+
+
+$sudo groupadd editorial
+$sudo usermod -a -G editorial olivia
+$grep editorial /etc/group
+
+
+newgrp: log into a new group
+sg: execute a command as a different group ID
+groupmod: modify a group definition (e.g., the group ID, group name, or password)
+gpasswd: administer /etc/group and /etc/gshadow files (every group can have administrators, members, and a password)
+chown or chgrp: change individual or group ownership of a file or directory

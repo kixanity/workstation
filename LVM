@@ -1,0 +1,53 @@
+#####Create LVM
+
+fdisk -l /dev/sdb			(view partition)
+fdisk /dev/sdb				(format which disk)
+p					(print disks)
+t					(change type of partition)
+L					(Lists of partition)
+8e					(Linux LVM)
+p					(print disks)
+w					(save partition)
+fdisk -l /dev/sdb			(view partition)
+pvcreate /dev/sdb1			(create physical volume)
+pvcreate /dev/sdc			(create physical volume)
+pvs/pvdisplay				(pv scan)
+vgcreate vg_new /dev/sdb1 /dev/sdc	(vgname + device1 + device 2)
+vgs/vgdisplay				(vg scan)
+lvcreate -L 800M -n lv_new vg_new 	("-L size" "-n name" "vgname")
+lvs/lvdisplay				(lv scan)
+mkfs.ext4 /dev/vg_new/lv_new		(make file system as ext4)
+
+mkdir /extra				(make dir where to mount)
+
+vim /etc/fstab				(auto mount at boot)
+
+/dev/vg_new/lv_new	/extra	ext4	defaults	0 0
+
+mount -t ext4 /dev/vg_new/lv_new /extra	(mount -t type /which /where)
+
+
+
+#####Resize LVM
+
+lvresize -L 900M /dev/vg_new/lv_new	(lvm resize "-L size")
+resize2fs /dev/vg_new/lv_new		(resize the file system)
+lvs/lvdisplay				(lv scan)
+
+
+
+#####Shrink LVM
+
+umount /extra				(unmount mount directory)
+fsck -f /dev/vg_new/lv_new		(file system check --force)
+resize2fs /dev/vg_new/lv_new 800M	(resize file system)
+lvresize -L 800M /dev/vg_new/lv_new	(resize "-L size" lvm)
+lvs/lvdisplay				(lv scan)
+mount -t ext4 /dev/vg_new/lv_new /extra	(mount -t type /which /where)
+df -h /extra				(show disk free space)
+
+
+
+
+
+

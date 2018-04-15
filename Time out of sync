@@ -1,0 +1,3 @@
+ssh to server
+
+$ntpdate -u ntppool.services.kambi.com

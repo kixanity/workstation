@@ -1,0 +1,55 @@
+Domain Name Services (DNS)
+	allows us to resolve Fully Qualified Domain Names (FQDNs) to an IP address
+	An FQDN is the name of a server, web site or device that we can access on the network
+	computer speak numbers
+	human remember names
+
+	client: receives the request
+	server: answers the request
+
+The Internal DNS Server (domain controller)
+	helps us find internal devices
+	DNS does forward as well as reverse look ups
+	reverse look up are when we look up the IP address that corresponds to the fully qualified domain name
+
+Specific functions of the DNS Server
+	Resolution
+		> performs look ups
+		FQDN to IP (forward)
+		IP to FQDN (reverse)
+
+	Dynamic Domain Name Systems (DNS)
+		> auto update records
+		monitors changes
+		may not give everyone permission
+
+
+DNS Records
+	A	> Address Record
+		Fully Qualified Domain Name (FQDN)
+		#192.0.2.1   		IPv4 address for example.com
+
+	AAAA	> IPv6 address record
+		lets us know a Fully Qualified Domain Name (FQDN)
+		#2001:db8:10::2		IPv6 address for example.com
+
+	CNAME	> Canonical name
+		record specifies a domain name that has to be queried in order to resolve the original DNS query
+		used for creating aliases of domain names
+		#butaw.example.com.	points to www.example.com.
+		
+
+	MX	> Mail exchange
+		allows client to connect to a mail server for a domain
+		#mail.google.com.	mail.example.com is the mailserver for example.com
+
+	PTR	> Pointer
+		this is what lets the DNS servers do reverse lookups, tells IP addresses
+		used to look up domain names based on an IP address
+		#example.com		192.0.2.1   
+
+
+
+
+
+

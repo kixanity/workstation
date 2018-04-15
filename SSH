@@ -1,0 +1,7 @@
+ssh root@ip
+ssh-keygen -t rsa
+ssh-copy-id root@ip
+vim /etc/ssh/sshd_config "PermitRootLogin without-password"
+
+
+2212

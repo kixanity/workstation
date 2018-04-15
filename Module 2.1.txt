@@ -1,0 +1,127 @@
+Routing Tables
+	> when setting up routers and switches, the first thing we need to examine are routing tables
+	routing tables allow a router to discover what the best path is to send packets 
+	and can be used to modify settings via the administrative portal on a router or on a particular cable
+	remember STP to keep multiple routers from forming loops
+
+Dynamic
+	> automatically find routes using different protocols
+	IGP - RIP/v2, OSPF, IGRP, EIGRP
+	EGP - BGP
+Static
+	> set particular routes
+	can set ‘default static route’
+
+Network Address Translation (NAT)
+	> allows a private IP address to be translated to a public address and vice versa
+	allows external users to access internet
+
+	Static NAT > one private is to one public
+	Dynamic NAT > maps addresses from
+	Overloading NAT > port address translation (PAT)
+	
+	Local	> happens on the inside of your network.
+	Global	> happens on the outside of your network.
+
+	Inside Local Address
+		> address of a host on your internal network
+		Private IP address that is being translated into public IP address
+	Inside Global Address
+		> This is the mapped address that people on the Internet would see, which represents the inside host
+		The public IP that the private IP address is being traslated in to
+	Outside Global Address
+		> The IP address of a remote Internet-based host as assigned by the owner that can communicate with an inside host
+		The destination's/outside's public IP address
+	Outside Local Address
+		> This is the address that the inside hosts use to reference an outside host
+		The outside local address may be the outside host’s actual address or another translated private address from a different private address block
+		The destination's/outside's private IP address
+
+Port Address Translation (PAT)
+	>overloading NAT
+	gives us the ability to map multiple IP addresses to a single public IP address
+	translation is done in the basis of IP address and port
+
+Virtual Local Area Network (VLAN)
+	> allows us to take the infrastructure for one local area network
+	make multiple virtual local networks which helps to segment different broadcast domains
+	requires use of managed switches
+	they cannot talk to each other unless it’s via a router
+		Port Based
+		MAC Address based
+		Subnet Based
+	Trunking
+		connection between switches
+		connect multiple VLANs
+
+VLAN Trunking Protocol (VTP)
+	> is a Cisco proprietary protocol that propagates the definition of Virtual Local Area Networks on the whole local area network
+	> Setup switches
+		VTP Domain
+		VTP Protocol
+		VTP Password
+	
+Switches:
+	Managed
+		> offers additional control of data flow and configurations
+		they are accessed via a default web interface with a username and password
+		or special cable
+	Unmanaged
+		> No web interface
+		plug and play
+		just let connections run
+		No additional functionality
+		managed switch may have a button to swap from
+
+Interface configurations:
+	Full duplex	> both directions simultaneously
+	Half duplex	> one at a time
+	Port speeds	> 10/100/1000mbps
+	IP addressing
+	MAC filtering
+
+
+Power over Internet (POE)
+	> useful for devices that need to be powered over a single standard Ethernet cable such as VOiP phones
+	cable provides data and power
+
+Traffic Filtering
+	> allows the router to inspect different packets
+	can be filtered by IP address and packet types
+	router acts like a firewall
+
+Diagnostics
+	> additional info.logs
+	stats and usage info
+	collisions and errors
+	may install additional software
+
+Quality of Service
+	> prioritizes certain packets
+	packets susceptible to delay give more weight
+
+
+Port Mirroring
+	> aka Switch Port Analyzer (SPAN)
+	allows devices to see copies of the data that’s going through a switch
+	configure port to receive copy of data
+	capture and analyze packets
+	place an IDS (IPS not useful here)
+	set up devices to capture data
+	devices on mirrored ports cant talk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

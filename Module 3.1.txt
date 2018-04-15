@@ -1,0 +1,100 @@
+Fiber
+	> glass/plastic rod
+	relies on light signals
+	no electromagnetic interference (EMI)
+
+	Single mode fiber (smf)
+		> single core
+		carry beam distance (50mi)
+		laser diode
+
+	Multi mode fibre (mmf)
+		> thicker core
+		multiple rays shorter distance (500m)
+		light-emitting diode
+
+
+Straight Tip (ST)
+	> multimode fiber
+Square/Standard Connector (SC)
+	> square faced
+Local Connector (LC)
+	> similar to SC
+Media Terminal recommended jack (MTRJ)
+	> two fiber prongs/cables
+	one send/other receive
+
+
+Copper cables
+	> are subject to electromagnetic interference (EMI)
+	made of smaller individual cabling twisted together
+	twists help to cancel out EMI
+ 
+Unshielded Twisted Pair (UTP)
+	> no braided metal shield
+Shielded Twisted Pair (STP)
+	> braided metal shield
+			
+	CAT3	10 mbps		16 MHz		10BASE-T and 100BASE-T4
+	CAT5	100 mbps	100 MHz		100BASE-TX & 1000BASE-T
+	CAT5e	1 gbps		100 MHz		100BASE-TX & 1000BASE-T
+	CAT6	10 gbps		250 MHz		10GBASE-T Ethernet
+	CAT6a	10 gbps		500 MHz		10GBASE-T Ethernet (shielded)
+	CAT7	10 gbps		1000 MHz	10GBASE-T Ethernet or POTS/CATV/1000BASE-T over single cable (fully shielded)
+
+
+Registered Jack 45 (RJ45)
+	Standard Straight
+		> connects different devices
+		same on both ends
+		
+
+	Crossover
+		> connects same devices
+						
+		1 - 3	
+		2 - 6	
+		3 - 1	
+		6 - 2
+
+		T-568A to T-568B
+		1	white/green	white/orange
+		2	green		orange
+		3	white/orange	white/green
+		4	blue		blue
+		5	white/blue	white/blue
+		6	orange		green
+		7	white/brown	white/brown
+		8	brown		brown	
+	
+	T1 crossover
+		T-568B
+		1 - 4
+		2 - 5	
+		4 - 1
+		5 - 2
+
+	1	white/orange	blue
+	2	orange		white/blue
+	3	white/green	white/green
+	4	blue		white/orange
+	5	white/blue	orange
+	6	green		green
+	7	white/brown	white/brown
+	8	brown		brown	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+CAM (Content Addressable Memory)
+
+Port 88 - UDP - Kerberos
+
+IEEE 802.1Q - vlan

@@ -1,0 +1,54 @@
+Network Management Tools
+
+Simple Network Management Protocol (SNMP)
+
+SNMP Manager
+	> data collection
+	can configure devices or pull information
+SNMP Agent
+	> software on device use on switches, printers and servers
+	can monitor or send data
+SNMPv2
+	> Performance improvements but complex security, not widely adopted
+SNMPv3
+	> The highest security, allows for username authentication
+	MD5/SHA authentication
+	verifying data is unchanged
+	encryption
+
+
+Syslog
+	> allows devices to send alerts and errors to a syslog server
+	Messages within the syslog specify which program logged the error, the severity of the error and the error itself
+	Messages can be spoofed (some may say its okay but its not )
+	can use software to parse and analyze messages (filter whats important and not)
+
+Event Viewer
+	> allows us to access logs and events
+	can be viewed on local and remote computers and servers
+	sort by log type or severity
+	custom logs can be set up, specifics tasks can also be audited
+
+
+General Logs
+	> system related events to view
+	application, security (e.g. someone tried to login but wrong password), system
+	information, warnings, error
+
+History Logs
+	> typical of Internet browsers
+	if something is not done right or maliciously
+	who modified this
+	additional ones can be configured
+	
+Traffic Analysis
+	> analyzes network traffic (wireshark/firewall/IDS logs/firewall)
+	some one is searching for devices/scanning ports)
+	always have a baseline/reference (you might be seeing things and making assumptions on data that was always like that)
+	
+Protocol Analyzer
+	> Analyzes traffic
+	provides insight
+	always run baseline
+
+

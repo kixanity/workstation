@@ -1,0 +1,37 @@
+1. Downloading and Installing the Components
+
+	host$ sudo apt-get update
+	host$ sudo apt-get install nfs-kernel-server
+
+	client$ sudo apt-get update
+	client$ sudo apt-get install nfs-common
+
+2. Creating the Share Directories on the Host
+
+	host$ sudo mkdir /mnt/shareddrive
+	#drwxr-xr-x  2 root   root    4096
+	host$ sudo chown nobody:nogroup /mnt/shareddrive
+
+3. Configuring the NFS Exports on the Host Server
+
+	host$ sudo vim /etc/exports
+
+	host$ #directory_to_share    clientip(share_option1,...,share_optionN)
+	host$ #/home       111.111.111.111(rw,sync,no_root_squash,no_subtree_check)
+	host$ #/home       10.1.146.0/24(rw)
+
+	host$ sudo service nfs-kernel-server start
+
+4. Creating the Mount Points on the Client
+
+	client$ sudo mkdir -p /nfs/general(where to mount)
+
+5. Mounting the Directories on the Client
+
+	client$ sudo mount 203.0.113.0:/mnt/shareddrive /nfs/general
+
+	client$ df -h
+
+6. Removing the NFS Mount
+
+	client$ sudo umount /nfs/general

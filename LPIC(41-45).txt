@@ -1,0 +1,42 @@
+41 - Changing Permissions & Creation Masks
+	/etc/profile
+	/etc/bashrc
+	/etc/login.defs
+
+	files 666
+	directories 777
+
+42 - SUID, GUID, & the Sticky Bit
+	rwsrwSrwt = '7'777
+		s 4 SUID
+		S 2 GUID
+		t 1 sticky bit
+
+43 - Hard & Soft Links
+	---
+
+44 - File Hierarchy Standard
+	/	base level
+	bin	system binaries
+	boot	boot loader
+	dev	devices
+	etc	config
+	home	user files
+	lib	system libraries
+	proc	virtual files system
+	root	root's home
+	sbin	essential system binaries
+	tmp	temp storage
+	var	temporal files
+	media	removable storage
+	mnt	temporary file system
+
+	/usr	(read-only)
+	bin	user binaries
+	lib	libraries for bin
+	local	customize local scripts
+	local bin
+
+45 - Find & Locate
+	/etc/updatedb.conf
+	PRUNE !=
